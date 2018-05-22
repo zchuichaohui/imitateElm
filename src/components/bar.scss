@@ -1,0 +1,31 @@
+body .weui-tabbar {
+    position: fixed;
+    height: 1.95rem;
+    width: 100%;
+}
+    
+    .weui-tabbar__item {
+     padding-top: 0.15rem;
+      height: 1rem;
+    }
+    .weui-tabbar__icon {
+        width: 0.36rem;
+        height: 0.36rem;
+    }
+.weui-tabbar__label {
+    margin-top: 1px !important;
+}
+    .weui-tabbar__label span {
+        font-size: 10px;
+        &.c-grey {
+            color: #333333;
+        }
+        &.c-red {
+            color: #f23d49;
+        }
+    }
+
+
+
+
+
