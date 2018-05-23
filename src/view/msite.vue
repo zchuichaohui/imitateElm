@@ -3,13 +3,13 @@
         <div class="header">
             <div class="address-weather">
                 <div style="display: inline;float: left;margin-left: .3rem">
-                    <img src="../assets/address.png">
+                    <img src="../assets/address.png"/>
                     <span>海外滩金融A座</span>
-                    <img src="../assets/address.png">
+                    <img src="../assets/address.png"/>
                 </div>
                 <div style="display: inline; margin-left: 7.5rem;margin-top: .3rem">
                     <span>30</span>
-                    <img src="../assets/weather.png">
+                    <img src="../assets/weather.png"/>
                 </div>
             </div>
             <div class="header-search">
@@ -55,7 +55,7 @@
                         <grid-item v-for="i in 10" :key="i">
                             <div class="grid-center">
                                 <img src="../assets/elm.png" style="display: block;width: .8rem;height:.9rem;"/>
-                                <span  class="grod-center-span">汉堡薯条</span>
+                                <span class="grod-center-span">汉堡薯条</span>
                             </div>
                         </grid-item>
                     </grid>
@@ -167,6 +167,7 @@
     import {ButtonTab, ButtonTabItem} from 'vux'
     import {Swiper, SwiperItem, Grid, GridItem} from 'vux'
     import {Tab, TabItem} from 'vux'
+
     let Config = require("../config/config");
     import tabbar from '../components/tabbar.vue';
 
@@ -192,8 +193,8 @@
                 results: [],
                 params: {},
                 demo03_list: demoList,
-                menuType:[],  //主页菜单分类
-                shopType:[],  //获取商家
+                menuType: [],  //主页菜单分类
+                shopType: [],  //获取商家
             }
         },
         components: {
@@ -278,12 +279,12 @@
             })
 
             //获取商家
-            this.$http.post(Config.base_url + '/info/business',{
+            this.$http.post(Config.base_url + '/info/business', {
                     sort_id: 5
                 },
             ).then(res => {
                 this.shopType = res.body.re_info
-            },function (error) {
+            }, function (error) {
                 console.log("获取商家异常：" + JSON.stringify(error))
             })
         },
@@ -365,7 +366,7 @@
     }
 
     .grod-center-span {
-        color:#333333;
+        color: #333333;
         font-size: .2rem !important;
         display: inline;
     }
@@ -375,7 +376,7 @@
         margin: 0 auto;
         overflow-x: hidden;
         display: flex;
-      margin-top: .2rem;
+        margin-top: .2rem;
         img {
             flex: 1;
             width: 49%;

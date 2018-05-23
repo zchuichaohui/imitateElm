@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        userInfo: null
+        userInfo: null,
+        nickname:'check',
+        count:1,
         //放置公用状态
     },
     getters: {
@@ -19,6 +21,15 @@ export const store = new Vuex.Store({
         //组件想要对于vuex 中的数据进行的处理
         //组件中采用this.$store.commit('方法名') 的方式调用，实现充分解耦
         //内部操作必须在此刻完成(同步)
+        modifyNickname(state,newNickname){
+            state.nickname = newNickname;
+        },
+        add(state){
+            state.count+=10;
+        },
+        reduce(state){
+            state.count-=1;
+        }
     },
     actions: {},
     modules: {

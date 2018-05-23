@@ -1,8 +1,11 @@
 import Vue from 'vue'
+import App from '../App.vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import msite from '../view/msite.vue'
 import mine from '../view/mine.vue'
+import orders from  '../view/orders.vue'
+import find from  '../view/find.vue'
+import login from  '../view/login.vue'
 
 Vue.use(Router)
 
@@ -11,14 +14,35 @@ const router = new Router({
         {
             path: '/',
             name: 'index',
-            component: mine,
+            component: App,
             children: [
                 {
-                    path: '/msite',
-                    component: msite
-                }, {
+                    path: '',
+                    redirect: '/mine'
+                },
+                {
                     path: '/mine',
+                    name:'mine',
                     component: mine
+                }, {
+                    path: '/msite',
+                    name:'msite',
+                    component: msite
+                },
+                {
+                    path: '/orders',
+                    name:'orders',
+                    component: orders
+                },
+                {
+                    path: '/find',
+                    name:'find',
+                    component: find
+                },
+                {
+                    path: '/login',
+                    name:'login',
+                    component: login
                 }
             ]
         }

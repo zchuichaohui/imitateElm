@@ -30,6 +30,7 @@
         width: 100%;
         display: block;
         top: 0;
+        height: 1.8rem;
         background-color: dodgerblue;
         .head_goback {
             width: 1rem;
